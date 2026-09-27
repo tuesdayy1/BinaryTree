@@ -162,6 +162,7 @@ public:
                 }
                 delete node;
             }
+            return 1;
         }
         else if (node->left_ && node->right_) {
             Node* min = node->right_;
@@ -182,6 +183,7 @@ public:
             }
             node->key_ = min->key_;
             delete min;
+            return 1;
         }
         else {
             if (root_->key_ == key) {
@@ -202,6 +204,7 @@ public:
                 child->p_ = parent;
                 delete node;
             }
+            return 1;
         }
         return 0;
     }
